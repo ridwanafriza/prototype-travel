@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Open Trip - Bramjono Transwisata</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html"
+          ><img
+            src="assets/logo-bramjono.png"
+            alt="Bramjono Transwisata"
+          /><span>Bramjono<small>TRANSWISATA</small></span></a
+        >
+        <button
+          class="mobile-toggle"
+          onclick="toggleMenu()"
+          aria-label="Buka menu"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+        <nav class="nav-links">
+          <a class="" href="index.html">Beranda</a>
+          <div class="nav-dropdown">
+            <button type="button">Layanan</button>
+            <div class="dropdown-menu">
+              <a href="packages.html">Open Trip</a
+              ><a href="custom.html">Custom Trip</a
+              ><a href="rental.html">Sewa Travel</a>
+            </div>
+          </div>
+          <a class="" href="about.html">About</a
+          ><a class="" href="gallery.html">Galeri</a
+          ><a class="" href="index.html#kontak">Kontak</a>
+          <div class="nav-dropdown panel-dropdown">
+            <button type="button">
+              <i data-lucide="shield-check"></i> Pengelola
+            </button>
+            <div class="dropdown-menu">
+              <a href="admin.html"
+                ><i data-lucide="layout-dashboard"></i> Admin</a
+              ><a href="superadmin.html"
+                ><i data-lucide="shield"></i> Superadmin</a
+              >
+            </div>
+          </div>
+          <div class="nav-actions">
+            <a class="btn btn-outline" href="login.html">Masuk</a
+            ><a class="btn btn-primary" href="register.html">Daftar</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-head">
+        <div class="container">
+          <span class="eyebrow">Layanan 01</span>
+          <h1>Open Trip</h1>
+          <p>
+            Pilih perjalanan yang sudah punya jadwal. Tinggal pilih paket, isi
+            data, lalu siap berangkat.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="filter-bar">
+            <input
+              id="searchPackage"
+              oninput="filterCards()"
+              placeholder="Cari paket atau destinasi..."
+            /><select id="typeFilter" onchange="filterCards()">
+              <option value="all">Semua layanan</option>
+              <option value="open">Open Trip</option></select
+            ><button class="btn btn-primary" onclick="filterCards()">
+              Cari
+            </button>
+          </div>
+          <div class="cards package-grid">
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1788877667927-671cc0d34091?auto=format&fit=crop&fm=jpg&q=82&w=1800"
+                  alt="Bromo Malang"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Bromo – Malang</h3>
+                <p>2 Hari 1 Malam · Hotel · Transportasi</p>
+                <strong>Rp 850.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1773122694239-63110f0c3541?auto=format&fit=crop&fm=jpg&q=82&w=1600"
+                  alt="Yogyakarta"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Jogja City Tour</h3>
+                <p>2 Hari 1 Malam · Hotel · City Tour</p>
+                <strong>Rp 1.250.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1668698508146-c5be6c952852?auto=format&fit=crop&fm=jpg&q=82&w=1600"
+                  alt="Bali"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Bali – Nusa Penida</h3>
+                <p>3 Hari 2 Malam · Hotel · Penyeberangan</p>
+                <strong>Rp 1.650.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1780771633861-a41281bf53fc?auto=format&fit=crop&fm=jpg&q=82&w=1600"
+                  alt="Borobudur"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Jogja – Borobudur</h3>
+                <p>1 Hari · Transportasi · Tiket</p>
+                <strong>Rp 750.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1709435673482-9eb334d5a2ae?auto=format&fit=crop&fm=jpg&q=82&w=1600"
+                  alt="Bali Beach"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Bali Santai</h3>
+                <p>3 Hari 2 Malam · Hotel · Wisata</p>
+                <strong>Rp 1.900.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+            <a class="card" data-package="open" href="detail.html"
+              ><div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1773122694239-63110f0c3541?auto=format&fit=crop&fm=jpg&q=82&w=1600"
+                  alt="Malioboro"
+                />
+              </div>
+              <div class="card-body">
+                <span class="badge orange">Open Trip</span>
+                <h3>Jogja Weekend</h3>
+                <p>2 Hari 1 Malam · City Tour</p>
+                <strong>Rp 900.000 <small>/orang</small></strong
+                ><span class="btn btn-outline full-btn"
+                  >Lihat Detail <i data-lucide="arrow-right"></i
+                ></span></div
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="assets/logo-bramjono.png"
+            alt="Bramjono"
+            style="
+              width: 150px;
+              height: auto;
+              background: #fff;
+              border-radius: 10px;
+              padding: 7px;
+              margin-bottom: 12px;
+            "
+          />
+          <p>
+            Teman perjalanan untuk open trip, custom trip, dan sewa kendaraan
+            wisata.
+          </p>
+        </div>
+        <div>
+          <h4>Layanan</h4>
+          <a href="packages.html">Open Trip</a
+          ><a href="custom.html">Custom Trip</a
+          ><a href="rental.html">Sewa Travel</a>
+        </div>
+        <div>
+          <h4>Informasi</h4>
+          <a href="about.html">Tentang Kami</a
+          ><a href="gallery.html">Galeri & Dokumentasi</a
+          ><a href="history.html">Pesanan Saya</a>
+        </div>
+        <div id="kontak">
+          <h4>Kontak</h4>
+          <a href="#">Jl. Raya Magetan No. 123</a
+          ><a href="tel:082112345678">0821 1234 5678</a
+          ><a href="mailto:bramjono.transwisata@gmail.com"
+            >bramjono.transwisata@gmail.com</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        © 2026 Bramjono Transwisata. Travel & transportasi wisata.
+      </div>
+    </footer>
+    <div id="modal" class="modal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 data-modal-title>Konfirmasi</h3>
+          <button class="modal-close" data-modal-close>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div data-modal-body></div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-modal-close>Batal</button
+          ><button class="btn btn-primary" data-modal-action>Tutup</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

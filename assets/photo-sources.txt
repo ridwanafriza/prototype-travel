@@ -1,0 +1,11 @@
+Stock photos used in this prototype are from Unsplash and are referenced/loaded directly from images.unsplash.com.
+
+Bromo: https://unsplash.com/photos/mount-bromo-volcano-in-east-java-CGXWAUupNhU
+Bromo mist: https://unsplash.com/photos/an-airplane-flying-over-a-mountain-covered-in-fog-OVTP-EUjl6I
+Van in Yogyakarta: https://unsplash.com/photos/blue-and-white-van-on-road-during-daytime-viAcwp4Ateo
+White van in rain: https://unsplash.com/photos/white-van-on-road-during-daytime-zm0l_w1tyug
+Bali street: https://unsplash.com/photos/a-street-lined-with-trees-and-a-white-van-l-svyH2KPKY
+Bali group: https://unsplash.com/photos/a-group-of-people-sitting-in-the-middle-of-a-circle-Ym_701tnHFA
+Borobudur: https://unsplash.com/photos/ancient-borobudur-temple-with-green-field-and-trees-g1M6A7wAy9g
+Bali beach: https://unsplash.com/photos/waves-crashing-on-a-beach-QT4bnvLs6r0
+Yogyakarta street: https://unsplash.com/photos/woman-in-hijab-walks-down-a-busy-street-n4_6qHMuuEI

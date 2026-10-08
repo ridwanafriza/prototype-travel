@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paket Wisata - Bramjono Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <div class="side-brand">
+          <img src="assets/logo-bramjono.png" />
+          <div><strong>Bramjono</strong><small>ADMIN PANEL</small></div>
+        </div>
+        <div class="side-label">Utama</div>
+        <a class="side-link" href="admin.html"
+          ><i data-lucide="layout-dashboard"></i> <span>Dashboard</span></a
+        >
+        <div class="side-label">Master Data</div>
+        <a class="side-link active" href="admin-packages.html"
+          ><i data-lucide="map"></i> <span>Paket Wisata</span></a
+        >
+        <a class="side-link" href="admin-rentals.html"
+          ><i data-lucide="bus-front"></i> <span>Sewa Travel</span></a
+        >
+        <a class="side-link" href="admin-schedules.html"
+          ><i data-lucide="calendar-days"></i> <span>Jadwal</span></a
+        >
+        <a class="side-link" href="admin-vehicles.html"
+          ><i data-lucide="car-front"></i> <span>Kendaraan</span></a
+        >
+        <div class="side-label">Transaksi</div>
+        <a class="side-link" href="admin-bookings.html"
+          ><i data-lucide="clipboard-list"></i> <span>Pemesanan</span></a
+        >
+        <div class="side-label">Sistem</div>
+        <a class="side-link" href="admin-users.html"
+          ><i data-lucide="users"></i> <span>Pengguna</span></a
+        >
+        <div class="side-label">Demo</div>
+        <a class="side-link" href="index.html"
+          ><i data-lucide="external-link"></i> <span>Lihat Website</span></a
+        >
+      </aside>
+      <main class="admin-main">
+        <header class="admin-top">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <button
+              class="btn btn-outline admin-menu-btn"
+              style="display: none; padding: 8px 10px"
+              onclick="toggleSidebar()"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+            <h1>Paket Wisata</h1>
+          </div>
+          <div class="admin-user">
+            <span>Super Admin</span><span class="admin-avatar">SA</span>
+          </div>
+        </header>
+        <div class="admin-content">
+          <div class="section-head">
+            <div>
+              <h2 style="font-size: 26px">Paket Wisata</h2>
+              <p>Kelola Open Trip dan Custom Trip.</p>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap">
+              <button
+                class="btn btn-primary"
+                onclick="
+                  openModal(
+                    'Tambah Data',
+                    'Isi data yang diperlukan, lalu simpan.',
+                    'Simpan',
+                  )
+                "
+              >
+                + Tambah Data</button
+              ><button
+                class="btn btn-outline"
+                data-demo="Filter data dijalankan."
+              >
+                Filter
+              </button>
+            </div>
+          </div>
+          <div class="filters">
+            <div class="field">
+              <label>Pencarian</label><input placeholder="Nama paket..." />
+            </div>
+            <div class="field">
+              <label>Jenis</label
+              ><select>
+                <option>Semua</option>
+                <option>Open Trip</option>
+                <option>Custom Trip</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Status</label
+              ><select>
+                <option>Aktif</option>
+                <option>Nonaktif</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nama Paket</th>
+                  <th>Jenis</th>
+                  <th>Durasi</th>
+                  <th>Harga</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Bromo – Malang Explorer</strong></td>
+                  <td>Open Trip</td>
+                  <td>3H 2M</td>
+                  <td>Rp1.250.000</td>
+                  <td><span class="status success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-soft"
+                      onclick="demoAction('Edit paket dibuka ')"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      class="btn btn-danger"
+                      onclick="demoAction('Aksi hapus  ')"
+                    >
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Jogja Heritage</strong></td>
+                  <td>Open Trip</td>
+                  <td>2H 1M</td>
+                  <td>Rp850.000</td>
+                  <td><span class="status success">Aktif</span></td>
+                  <td>
+                    <button class="btn btn-soft" data-demo="Edit paket dibuka ">
+                      Edit
+                    </button>
+                    <button class="btn btn-danger" data-demo="Aksi hapus  ">
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Custom Jawa Timur</strong></td>
+                  <td>Custom Trip</td>
+                  <td>Menyesuaikan</td>
+                  <td>By Request</td>
+                  <td><span class="status success">Aktif</span></td>
+                  <td>
+                    <button class="btn btn-soft" data-demo="Edit paket dibuka ">
+                      Edit
+                    </button>
+                    <button class="btn btn-danger" data-demo="Aksi hapus  ">
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 data-modal-title>Konfirmasi</h3>
+          <button class="modal-close" data-modal-close>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div data-modal-body></div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-modal-close>Batal</button
+          ><button class="btn btn-primary" data-modal-action>Tutup</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

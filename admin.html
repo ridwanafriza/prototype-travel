@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Bramjono Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <div class="side-brand">
+          <img src="assets/logo-bramjono.png" />
+          <div><strong>Bramjono</strong><small>ADMIN PANEL</small></div>
+        </div>
+        <div class="side-label">Utama</div>
+        <a class="side-link active" href="admin.html"
+          ><i data-lucide="layout-dashboard"></i> <span>Dashboard</span></a
+        >
+        <div class="side-label">Master Data</div>
+        <a class="side-link" href="admin-packages.html"
+          ><i data-lucide="map"></i> <span>Paket Wisata</span></a
+        >
+        <a class="side-link" href="admin-rentals.html"
+          ><i data-lucide="bus-front"></i> <span>Sewa Travel</span></a
+        >
+        <a class="side-link" href="admin-schedules.html"
+          ><i data-lucide="calendar-days"></i> <span>Jadwal</span></a
+        >
+        <a class="side-link" href="admin-vehicles.html"
+          ><i data-lucide="car-front"></i> <span>Kendaraan</span></a
+        >
+        <div class="side-label">Transaksi</div>
+        <a class="side-link" href="admin-bookings.html"
+          ><i data-lucide="clipboard-list"></i> <span>Pemesanan</span></a
+        >
+        <div class="side-label">Akses</div>
+        <a class="side-link" href="superadmin.html"
+          ><i data-lucide="shield"></i> <span>Superadmin</span></a
+        ><a class="side-link" href="index.html"
+          ><i data-lucide="external-link"></i> <span>Lihat Website</span></a
+        >
+      </aside>
+      <main class="admin-main">
+        <header class="admin-top">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <button
+              class="btn btn-outline admin-menu-btn"
+              style="display: none; padding: 8px 10px"
+              onclick="toggleSidebar()"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+            <h1>Dashboard</h1>
+          </div>
+          <div class="admin-user">
+            <span>Administrator</span><span class="admin-avatar">AD</span>
+          </div>
+        </header>
+        <div class="admin-content">
+          <div class="stat-grid">
+            <div class="stat">
+              <small>Total Paket Wisata</small><strong>12</strong
+              ><span class="badge orange">+2 bulan ini</span>
+            </div>
+            <div class="stat">
+              <small>Paket Sewa Travel</small><strong>8</strong
+              ><span class="badge cyan">Aktif</span>
+            </div>
+            <div class="stat">
+              <small>Pemesanan Baru</small><strong>24</strong
+              ><span class="badge">Perlu dicek</span>
+            </div>
+            <div class="stat">
+              <small>Pengguna</small><strong>186</strong
+              ><span class="badge">Customer</span>
+            </div>
+          </div>
+          <div class="admin-grid">
+            <section class="form-card">
+              <div class="section-head" style="margin-bottom: 15px">
+                <div>
+                  <h2 style="font-size: 22px">Pemesanan terbaru</h2>
+                  <p>Ringkasan pemesanan terbaru.</p>
+                </div>
+                <a class="btn btn-outline" href="admin-bookings.html"
+                  >Lihat semua</a
+                >
+              </div>
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Kode</th>
+                      <th>Customer</th>
+                      <th>Layanan</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>BRM-00124</td>
+                      <td>Andi Pratama</td>
+                      <td>Open Trip</td>
+                      <td><span class="status pending">Menunggu</span></td>
+                    </tr>
+                    <tr>
+                      <td>BRM-00123</td>
+                      <td>Siti Rahma</td>
+                      <td>Sewa Travel</td>
+                      <td><span class="status success">Disetujui</span></td>
+                    </tr>
+                    <tr>
+                      <td>BRM-00122</td>
+                      <td>Fajar Nugraha</td>
+                      <td>Custom Trip</td>
+                      <td><span class="status pending">Menunggu</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="form-card">
+              <h2
+                style="
+                  font-size: 22px;
+                  font-family: &quot;Plus Jakarta Sans&quot;;
+                "
+              >
+                Akses cepat
+              </h2>
+              <div class="quick-grid">
+                <a class="quick" href="admin-packages.html"
+                  ><i data-lucide="map"></i> Kelola Paket</a
+                ><a class="quick" href="admin-rentals.html"
+                  ><i data-lucide="bus-front"></i> Kelola Sewa</a
+                ><a class="quick" href="admin-schedules.html"
+                  ><i data-lucide="calendar-days"></i> Atur Jadwal</a
+                ><a class="quick" href="admin-vehicles.html"
+                  ><i data-lucide="car-front"></i> Data Kendaraan</a
+                ><a class="quick" href="admin-bookings.html"
+                  ><i data-lucide="clipboard-list"></i> Cek Pesanan</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3 data-modal-title>Konfirmasi</h3>
+          <button class="modal-close" data-modal-close>
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div data-modal-body></div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" data-modal-close>Batal</button
+          ><button class="btn btn-primary" data-modal-action>Tutup</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

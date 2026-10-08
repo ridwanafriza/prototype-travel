@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f28c18"/><stop offset=".52" stop-color="#f7b34b"/><stop offset="1" stop-color="#25b9c6"/></linearGradient></defs>
+<rect width="900" height="560" rx="28" fill="url(#g)"/><circle cx="710" cy="120" r="70" fill="#fff4cf" opacity=".9"/>
+<path d="M0 390 190 210 300 330 430 170 600 350 730 220 900 390v170H0z" fill="#18363a"/>
+<path d="M0 430 180 320 300 390 430 270 570 390 720 300 900 430v130H0z" fill="#286b60"/>
+<path d="M390 560 455 335 510 560z" fill="#f5efe2"/><path d="M430 405 455 335 480 405z" fill="#fff"/>
+<text x="52" y="82" fill="white" font-family="Arial,sans-serif" font-size="34" font-weight="700">BROMO • MALANG</text></svg>

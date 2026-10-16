@@ -75,6 +75,70 @@ function confirmDemo(title, message) {
       demoAction("Perubahan berhasil.");
     };
 }
+const USER_KEY = "bramjono_user";
+function getUser() {
+  try {
+    return JSON.parse(localStorage.getItem(USER_KEY));
+  } catch (e) {
+    return null;
+  }
+}
+function saveUser(user) {
+  localStorage.setItem(USER_KEY, JSON.stringify(user));
+}
+function logout() {
+  localStorage.removeItem(USER_KEY);
+  window.location.href = "index.html";
+}
+function escapeHTML(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+function handleLogin(e) {
+  e.preventDefault();
+  const id = e.target.querySelector("input").value.trim(),
+    name = id.split("@")[0];
+  saveUser({
+    name: name.charAt(0).toUpperCase() + name.slice(1),
+    email: id.includes("@") ? id : "",
+    wa: id.includes("@") ? "" : id,
+    initials: name.slice(0, 2).toUpperCase(),
+  });
+  window.location.href = "history.html";
+  return false;
+}
+function renderAuthNav() {
+  const user = getUser(),
+    actions = document.querySelector(".nav-actions");
+  if (!user || !actions) return;
+  actions.style.display = "none";
+  actions.insertAdjacentHTML(
+    "beforebegin",
+    `<div class="nav-dropdown">
+      <button type="button"><i data-lucide="user-round"></i> ${escapeHTML(user.name)}</button>
+      <div class="dropdown-menu">
+        <a href="history.html"><i data-lucide="receipt"></i> Pesanan Saya</a
+        ><a href="profile.html"><i data-lucide="user"></i> Profil</a
+        ><a href="#" onclick="logout();return false"
+          ><i data-lucide="log-out"></i> Keluar</a
+        >
+      </div>
+    </div>`,
+  );
+}
+function renderAuthState() {
+  const user = getUser();
+  document.querySelectorAll("[data-auth]").forEach((el) => {
+    el.hidden = (el.dataset.auth === "in") !== !!user;
+  });
+  document.querySelectorAll("[data-user]").forEach((el) => {
+    const value = user && user[el.dataset.user];
+    if (!value) return;
+    if (el.tagName === "INPUT") el.value = value;
+    else el.textContent = value;
+  });
+}
 function setupHomeChoices() {
   const service = document.getElementById("homeService");
   service?.addEventListener("change", () => {
@@ -106,6 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ?.addEventListener("input", updateTotal);
   updateTotal();
   setupHomeChoices();
+  renderAuthNav();
+  renderAuthState();
   refreshIcons();
 });
 document.addEventListener("click", function (e) {

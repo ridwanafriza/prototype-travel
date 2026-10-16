@@ -44,7 +44,7 @@
                 ><i data-lucide="layout-dashboard"></i> Admin</a
               ><a href="superadmin.html"
                 ><i data-lucide="shield"></i> Superadmin</a
-              >
+              ><a href="login.html"><i data-lucide="log-in"></i> Masuk</a>
             </div>
           </div>
           <div class="nav-actions">
@@ -61,7 +61,7 @@
         </div>
         <h1>Masuk ke akun</h1>
         <p>Kelola booking dan lihat riwayat perjalananmu.</p>
-        <form onsubmit="return submitDemoForm(event, 'Berhasil masuk.');">
+        <form onsubmit="return handleLogin(event);">
           <label
             >Email / No. WhatsApp<input
               required

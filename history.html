@@ -44,7 +44,7 @@
                 ><i data-lucide="layout-dashboard"></i> Admin</a
               ><a href="superadmin.html"
                 ><i data-lucide="shield"></i> Superadmin</a
-              >
+              ><a href="login.html"><i data-lucide="log-in"></i> Masuk</a>
             </div>
           </div>
           <div class="nav-actions">
@@ -64,7 +64,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <div class="history-list">
+          <div class="history-list" data-auth="in" hidden>
             <div class="history-card">
               <div>
                 <span class="badge orange">Menunggu Verifikasi</span>
@@ -81,6 +81,16 @@
               </div>
               <strong>Rp 5.000.000</strong>
             </div>
+          </div>
+          <div class="form-card history-login" data-auth="out">
+            <h2>Belum masuk</h2>
+            <p class="muted">
+              Masuk ke akun untuk melihat riwayat pesanan dan status
+              perjalananmu.
+            </p>
+            <a class="btn btn-primary" href="login.html"
+              ><i data-lucide="log-in"></i> Masuk</a
+            >
           </div>
         </div>
       </section>
